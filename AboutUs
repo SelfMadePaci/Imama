@@ -1,0 +1,22 @@
+# Imama-Nutrition-Mobile-App
+import javax.swing.*;
+import java.awt.*;
+
+public class AboutPanel extends JPanel {
+    public AboutPanel() {
+        setLayout(new BorderLayout());
+        JTextArea aboutText = new JTextArea(
+            "Imama Nutrition Community & Skill Development Centre\n\n" +
+            "We are a non-profit organization supporting underprivileged\n" +
+            "communities with nutrition, education, and empowerment.\n\n" +
+            "This application helps volunteers, manages donations,\n" +
+            "and supports event coordination for community outreach."
+        );
+        aboutText.setEditable(false);
+        aboutText.setWrapStyleWord(true);
+        aboutText.setLineWrap(true);
+        aboutText.setFont(new Font("Arial", Font.PLAIN, 14));
+        JScrollPane scrollPane = new JScrollPane(aboutText);
+        add(scrollPane, BorderLayout.CENTER);
+    }
+}
